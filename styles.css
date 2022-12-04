@@ -1,0 +1,162 @@
+/*noinspection CssUnknownTarget*/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+:root {
+    --textColor: hsl(240, 2%, 91%);
+    --backgroundColor: hsl(0, 0%, 12%);
+    font-family: 'Press Start 2P', cursive;
+    color: var(--textColor);
+    background-color: var(--backgroundColor);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.header {
+    margin: 2rem 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+
+.number {
+    margin: 2rem 0;
+    height: 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.number > h1 {
+    background-color: var(--textColor);
+    width: 8rem;
+    color: var(--backgroundColor);
+    vertical-align: middle;
+    text-align: center;
+    line-height: 6rem;
+    font-size: 2.5rem;
+}
+
+.line {
+    width: 100%;
+    height: 7px;
+    background-color: var(--textColor);
+    position: absolute;
+    transform: translateY(3rem);
+    z-index: -1;
+}
+
+.btn {
+    font-family: 'Press Start 2P', cursive;
+    padding: 1rem 1.5rem;
+    border: 0;
+    box-shadow: none;
+    border-radius: 1px;
+    font-size: 1.1rem;
+}
+
+.interactive {
+    margin: 2rem;
+    padding: 1rem 9rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.guess {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: auto;
+}
+
+/* submit button */
+.guess > button {
+    margin: 3rem auto;
+
+}
+
+.guess > input {
+    margin: 1px auto;
+    border: solid 3px var(--textColor);
+    border-radius: 0;
+
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    padding: 2rem 1rem;
+    font-size: 2rem;
+    width: 50%;
+
+    font-family: inherit;
+    text-align: center;
+}
+
+
+.analytics {
+    font-size: 1.3rem;
+}
+
+.analytics > * {
+    margin: 1rem;
+}
+
+.analytics > :first-child {
+    margin-top: 0;
+    margin-bottom: 5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    /*body {*/
+    /*    background-color: aqua;*/
+    /*}*/
+    :root {
+        font-size: 13px;
+    }
+
+    .btn {
+        padding: .5rem .75rem;
+        font-size: 1rem;
+    }
+
+    .header {
+        align-content: center;
+    }
+
+    .header > p {
+        font-size: .7rem;
+    }
+
+    .interactive {
+        padding: inherit;
+    }
+
+    .analytics {
+        font-size: 1.1rem;
+    }
+
+    .guess > input {
+        font-size: 1.5rem;
+    }
+
+    .analytics > :not(:first-child) {
+        font-size: .8rem;
+    }
+}

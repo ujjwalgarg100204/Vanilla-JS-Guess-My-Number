@@ -14,6 +14,7 @@ function playAgain() {
     number = Math.floor(Math.random() * 100 % 20);
     remarks.textContent = "Start guessing";
     score.textContent = "20";
+    document.querySelector(".number > h1").textContent = "?";
     highestScore.textContent = String(Math.max(...scores) === -Infinity ? 0 : Math.max(...scores));
     document.querySelector("input").value = "0";
     document.querySelector("input").disabled = false;
@@ -30,6 +31,7 @@ function isWinningGuess(guess) {
         remarks.textContent = "📉" + (guess <= number - 5 ? "Too" : "Little") + " Low!";
     else {
         remarks.textContent = "🥳 Correct Answer 🥳";
+        document.querySelector(".number > h1").textContent = number;
         return true;
     }
     return false;
